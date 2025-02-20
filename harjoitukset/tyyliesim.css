@@ -114,7 +114,59 @@ img {
 
 }
 
-.kuvaus {
+.galleria1 {
+    width: 50%;
+    border: 0px solid #000;
+    margin: auto;
+    /*font-size: 25px;*/
+    /*text-align: left;*/
+    /*padding: 10px;*/
+    /*object-fit: contain;*/
+    /*object-position: left;*/
+    /*position: static;*/
+    display: flex
+        /*inline-block*/
+    ;
+    flex-direction: row;
+    /*flex-flow: row wrap;*/
+    /*align-items: left;*/
+    /*justify-content: space-evenly;*/
+}
+
+.galleria1:hover {
+    border: 1px solid #000;
+}
+
+.galleria1 img {
+    width: 100%;
+    height: auto;
+}
+
+.kuvateksti {
+    /*padding: 15px;*/
+    text-align: center;
+    /*background-color: #ecded5;*/
+    border: 0.125rem solid #a66b37;
+    /*2px*/
+    font-family: "MS Reference", sans-serif;
+    background-color: #dde1e2;
+    font-size: 1.25rem
+        /*20px;*/
+}
+
+.galleriakuvaus {
+    /*background-color: #ecded5;*/
+    border: 0.125rem solid #a66b37;
+    /*2px*/
+    text-align: center;
+    font-family: "MS Reference", sans-serif;
+    background-color: #dde1e2;
+    font-size: 1.25rem
+        /*20px;*/
+        /*I wanted to include some other fonts, but of course from the same family*/
+}
+
+.yleinenkuvaus {
     /*background-color: #ecded5;*/
     border: 0.125rem solid #a66b37;
     /*2px*/
