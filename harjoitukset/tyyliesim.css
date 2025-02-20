@@ -181,6 +181,7 @@ footer {
     /*this makes the bulletpoints follow the text, without it the bulletpoints will remain to their default positions*/
     padding: 0.625rem 1.5625rem;
     /*10px 25px;*/
+    line-height: 4rem;
     font-size: 1.875rem;
     /*30px;*/
     font-family: "MS Reference", sans-serif;
@@ -189,6 +190,7 @@ footer {
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-evenly;
+
 }
 
 a.ex1:link,
