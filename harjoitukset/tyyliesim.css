@@ -1,7 +1,9 @@
 body {
-    max-width: 60em;
+    /*max-width: 60em;*/
     margin: 0 auto 0 auto;
     background: url("../kuvat/DOGItausta2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 img {
@@ -179,9 +181,7 @@ footer {
     list-style-position: inside;
     /*this makes the text centered*/
     /*this makes the bulletpoints follow the text, without it the bulletpoints will remain to their default positions*/
-    padding: 0.625rem
-        /*1.5625rem*/
-    ;
+    padding: 0.625rem 1.5625rem;
     /*10px 25px;*/
     margin: auto;
     /*line-height: 4rem;*/
