@@ -12,7 +12,28 @@ img {
     /*some adjustments to the background image, making it fit it's container*/
 }
 
-.valikko1 {
+.dropbtn {
+    background-color: #dde1e2
+        /*#f2f2ed*/
+    ;
+    color: #000;
+    padding: 0.625rem 0.9375rem;
+    font-size: 1.25rem;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: #f2f2ed
+        /*#a66b37*/
+    ;
+}
+
+.dropdown {
+    position: sticky
+        /*relative*/
+    ;
     display: inline-block;
     text-align: left;
     color: #000;
@@ -20,63 +41,37 @@ img {
     /*15px;*/
     position: sticky;
     top: 0;
-    background-color: #FFF;
+    background-color: #fff;
 }
 
-.valikko1 button {
-    background-color: #f2f2Ed;
-    color: #000;
-    padding: 0.625rem 0.9375rem;
-    /*10px 15px;*/
-    border: none;
-    cursor: pointer;
-    font-size: 1.25rem;
-    /*20px;*/
-}
-
-.valikko1 a {
-    display: block;
-    color: black;
-    text-decoration: none;
-    padding: 0.625rem 0.9375rem;
-    /*10px 15px;*/
-    font-size: 1.25rem;
-    /*20px;*/
-}
-
-.valikko1 .content {
+.dropdown-content {
     display: none;
     position: absolute;
-    background-color: hsl(0, 0%, 95%);
+    background-color: #dde1e2
+        /*hsl(0, 0%, 95%)*/
+    ;
     min-width: 6.25rem;
-    /*100px;*/
+    overflow: auto;
     box-shadow: 0.3125rem 0.3125rem 0.625rem hsla(0, 0%, 0%, 0.8);
-    /*5px 5px 10px;*/
+    z-index: 1;
 }
 
-.valikko1:hover .content {
+.dropdown-content a {
+    color: black;
+    padding: 0.625rem 0.9375rem;
+    text-decoration: none;
     display: block;
-}
-
-.valikko1:hover button {
-    background-color: #a66b37;
-}
-
-.valikko1 a:hover {
-    background-color: #a66b37;
-}
-
-
-.valikko2 {
-    text-align: left;
     font-size: 1.25rem;
-    /*20px;*/
-    position: 0.3125rem;
-    /*5px;*/
-    display: list-item;
-    background-color: #fff;
-    /*min-width: 100px*/
-    border: 0px solid #000;
+}
+
+.dropdown a:hover {
+    background-color: #fff
+        /*#a66b37*/
+    ;
+}
+
+.show {
+    display: block;
 }
 
 .sticky {
@@ -190,6 +185,10 @@ footer {
     /*30px;*/
     font-family: "MS Reference", sans-serif;
     /*some shorthand padding, to make it a bit more separated from the rest of the content*/
+    display: flex, inline-block;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 a.ex1:link,
@@ -199,27 +198,39 @@ a.ex1:visited {
     /*14px 25px;*/
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: flex, inline-block;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-a.ex1:hover,
-a.ex1:active {
-    background-color: white;
-    border: 0.0625rem solid #000;
-    /*1px*/
+@media (hover: hover) {
+
+    a.ex1:hover,
+    a.ex1:active {
+        background-color: white;
+        border: 0.0625rem solid #000;
+        /*1px*/
+    }
+
+    /*this set of styling makes the link look like a button when hovered over with a cursor*/
 }
 
-/*this set of styling makes the link look like a button when hovered over with a cursor*/
+@media (hover: hover) {
 
-a.ex2:link,
-a.ex2:visited {
-    background-color: #caa885;
-    color: #000;
-    border: 0.0625rem solid #000;
-    /*1px*/
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    a.ex2:link,
+    a.ex2:visited {
+        background-color: #caa885;
+        color: #000;
+        border: 0.0625rem solid #000;
+        /*1px*/
+        text-align: center;
+        text-decoration: none;
+        display: flex, inline-block;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
 }
 
 a.ex2:hover,
