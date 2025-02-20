@@ -1,12 +1,299 @@
 body {
-    background-color: beige;
+    max-width: 60em;
+    margin: 0 auto 0 auto;
+    background: url("../kuvat/DOGItausta2.jpg");
 }
+
+img {
+    /*width: 1536px;
+    height: 730px;*/
+    /*I thought of determining the size of the image, so that it would not be poorly stretched on smaller devices, but ended up deciding that it would be best to let it stretch accordingly to the screen's size of the device used*/
+    object-fit: cover;
+    /*some adjustments to the background image, making it fit it's container*/
+}
+
+.valikko1 {
+    display: inline-block;
+    text-align: left;
+    color: #000;
+    padding: 0.9375rem;
+    /*15px;*/
+    position: sticky;
+    top: 0;
+    background-color: #FFF;
+}
+
+.valikko1 button {
+    background-color: #f2f2Ed;
+    color: #000;
+    padding: 0.625rem 0.9375rem;
+    /*10px 15px;*/
+    border: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+    /*20px;*/
+}
+
+.valikko1 a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 0.625rem 0.9375rem;
+    /*10px 15px;*/
+    font-size: 1.25rem;
+    /*20px;*/
+}
+
+.valikko1 .content {
+    display: none;
+    position: absolute;
+    background-color: hsl(0, 0%, 95%);
+    min-width: 6.25rem;
+    /*100px;*/
+    box-shadow: 0.3125rem 0.3125rem 0.625rem hsla(0, 0%, 0%, 0.8);
+    /*5px 5px 10px;*/
+}
+
+.valikko1:hover .content {
+    display: block;
+}
+
+.valikko1:hover button {
+    background-color: #a66b37;
+}
+
+.valikko1 a:hover {
+    background-color: #a66b37;
+}
+
+
+.valikko2 {
+    text-align: left;
+    font-size: 1.25rem;
+    /*20px;*/
+    position: 0.3125rem;
+    /*5px;*/
+    display: list-item;
+    background-color: #fff;
+    /*min-width: 100px*/
+    border: 0px solid #000;
+}
+
+.sticky {
+    position: sticky;
+    font-size: 2.5rem;
+    /*40px;*/
+    border: 0.1875rem solid #fff;
+    /*3px*/
+    background-color: #fff;
+    top: 0;
+    margin: 0;
+    /*text-align: justify;*/
+}
+
+.otsikko {
+    border: 0px solid #000;
+    font-size: 1.5625rem;
+    /*25px;*/
+    text-align: center;
+    margin: auto;
+    padding: 1.25rem;
+    /*20px;*/
+    font-family: "MS Reference", sans-serif;
+}
+
+.otsikko2 {
+    width: 100%;
+    border: 0px solid #000;
+    margin: auto;
+    /*font-size: 25px;*/
+    /*text-align: center;*/
+    /*padding: 10px;*/
+    object-fit: contain;
+    /*object-position: center;*/
+    position: static;
+
+}
+
+.kuvaus {
+    /*background-color: #ecded5;*/
+    border: 0.125rem solid #a66b37;
+    /*2px*/
+    text-align: center;
+    font-family: "MS Reference", sans-serif;
+    background-color: #dde1e2;
+    font-size: 1.25rem
+        /*20px;*/
+        /*I wanted to include some other fonts, but of course from the same family*/
+}
+
+p {
+    /*background-color: #ecded5;*/
+    /*border: 2px solid #a66b37;
+    font-family: "MS Reference", sans-serif;
+    background-color: #dde1e2;*/
+}
+
+
 h1 {
-    color: brown;
+    text-align: center;
+    font-size: 2.1875rem;
+    /*35px;*/
+    font-family: "MS Reference", sans-serif;
 }
+
 h2 {
-    color: chocolate;
+    background-color: #ecded5;
+    border: 0.0625rem solid #000;
+    /*1px*/
+    text-align: center;
+    /*this makes the text centered*/
+    padding: 0.3125rem 0.625rem;
+    /*5px 10px;*/
+    font-family: "MS Reference", sans-serif;
+    /*I wanted to include some other fonts, but of course from the same family*/
 }
-h3 {
-    color: darkred;
+
+footer {
+    font-size: 1.25rem;
+    /*20px;*/
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+}
+
+.footer {
+    background-color: #f2f2ed;
+    /*ei käytetä tätä*/
+    border: 0.125rem solid #a66b37;
+    /*2px*/
+    font-family: "MS Reference", sans-serif;
+    /*background-color: #dde1e2;*/
+    margin: 0;
+    /*padding: 0;*/
+}
+
+.footer:visited {
+    color: #000;
+}
+
+.linkit {
+    /*background-color: #f2f2ed;*/
+    border: 0px solid #000;
+    text-align: center;
+    list-style-position: inside;
+    /*this makes the text centered*/
+    /*this makes the bulletpoints follow the text, without it the bulletpoints will remain to their default positions*/
+    padding: 0.625rem 1.5625rem;
+    /*10px 25px;*/
+    font-size: 1.875rem;
+    /*30px;*/
+    font-family: "MS Reference", sans-serif;
+    /*some shorthand padding, to make it a bit more separated from the rest of the content*/
+}
+
+a.ex1:link,
+a.ex1:visited {
+    color: #000;
+    padding: 0.875rem 1.5625rem;
+    /*14px 25px;*/
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.ex1:hover,
+a.ex1:active {
+    background-color: white;
+    border: 0.0625rem solid #000;
+    /*1px*/
+}
+
+/*this set of styling makes the link look like a button when hovered over with a cursor*/
+
+a.ex2:link,
+a.ex2:visited {
+    background-color: #caa885;
+    color: #000;
+    border: 0.0625rem solid #000;
+    /*1px*/
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.ex2:hover,
+a.ex2:active {
+    background-color: white;
+}
+
+/*this set of styling makes the link look like a button with borders when hovered over with a cursor*/
+
+th {
+    border-collapse: collapse;
+    border: 0.0625rem solid #000;
+    /*1px*/
+    padding: 1em;
+    background-color: #ecded5;
+    width: 100%;
+    /*this makes the length of the column to match the full width of the site*/
+    text-align: center;
+    font-family: "MS Reference", sans-serif;
+    /*I wanted to include some other fonts, but of course from the same family*/
+}
+
+table {
+    border-collapse: collapse;
+    border: 0.0625rem solid #000;
+    /*1px*/
+    padding: 1em;
+    background-color: #caa885;
+    text-align: center;
+    table-layout: fixed;
+    /*I included this in order to make the table centered, so that both sides are of equal length*/
+    width: 100%;
+}
+
+td {
+    border-collapse: collapse;
+    border: 0.0625rem solid #000;
+    /*1px*/
+    padding: 1em;
+    background-color: #caa885;
+    text-align: center;
+    font-style: italic;
+    /*This makes the text shown inside the table to be displayed in italics*/
+    width: 50%;
+    /*I added this so that the table columns are split equally into 2 parts, but only halved in length*/
+}
+
+caption {
+    border-collapse: collapse;
+    border: 0.0625rem solid #000;
+    /*1px*/
+    background-color: #caa885;
+    /*The reason I didn't group some of these elements is that I wanted them to have some minor differences, i.e in colors*/
+}
+
+.altcolor {
+    background-color: #ecded5;
+    /* this is so the table alternates between colors*/
+}
+
+.source {
+    padding: 0.3125rem 0;
+    /*5px 0px;*/
+    text-align: center;
+    background-color: #e4d4bd;
+    /* i added some padding onto the paragraph with the source link to create some separation*/
+}
+
+.resp {
+    overflow-x: auto;
+    /*this adds a scroll bar to the table, for responsiveness*/
+}
+
+.hcolor {
+    background-color: #caa885;
+    /*i wanted the headers in the other pages to be of a different color*/
 }
