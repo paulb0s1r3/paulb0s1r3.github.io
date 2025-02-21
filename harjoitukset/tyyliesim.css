@@ -10,6 +10,14 @@ body {
     text-align: center;
 }
 
+/*Mobiililaitteille määritetty taustakuvan käyttäytymismääritteet*/
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+        /*mahdollistaa kuvan vierityksen mobiililaitteella*/
+    }
+}
+
 img {
     object-fit: cover;
     /*some adjustments to the background image, making it fit it's container*/
@@ -210,14 +218,14 @@ td p {
     /*2px*/
     text-align: center;
     display: inline-block;
-    padding: 0.2rem 0.5rem;
+    padding: 0.5rem;
     font-family: "MS Reference", sans-serif;
     /*tässä määritellään kuvauksen fontit, sekä vaihtoehtoinen fontti, jos laite ei tue ensimmäistä*/
     /*background-color: #dde1e2;*/
     background-color: #f2f2ed;
     font-size: 1.563rem;
     /*1.25rem 20px;*/
-    margin: 0.5rem;
+    margin: 0.5rem 0rem 0rem 0rem;
 }
 
 /*vaihtoehtoinen globaali paragraafin tyylittelytapa: 
@@ -304,7 +312,7 @@ footer {
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-evenly;
-
+    box-shadow: 0 0 0.3125rem 0 #000;
 }
 
 a.ex1:link,
@@ -327,6 +335,7 @@ a.ex1:visited {
         background-color: white;
         border: 0.0625rem solid #000;
         /*1px*/
+        box-shadow: 0 0 0.3125rem 0 #000;
     }
 
     /*tämä tyylittely saa linkin näyttämään painikkeelta, kun hiirtä pitää linkin yllä*/
