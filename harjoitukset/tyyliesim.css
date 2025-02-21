@@ -6,15 +6,16 @@ body {
     background-attachment: fixed;
     /*object-fit: cover;*/
     background-size: 100% 100%;
+    background-color: #f2f2ed;
+    text-align: center;
 }
 
 img {
-    /*width: 1536px;
-    height: 730px;*/
-    /*I thought of determining the size of the image, so that it would not be poorly stretched on smaller devices, but ended up deciding that it would be best to let it stretch accordingly to the screen's size of the device used*/
     object-fit: cover;
     /*some adjustments to the background image, making it fit it's container*/
 }
+
+/*tästä alkaa valikon tyylittely*/
 
 .dropbtn {
     background-color: #dde1e2
@@ -78,113 +79,156 @@ img {
     display: block;
 }
 
-.sticky {
-    position: sticky;
-    font-size: 2.5rem;
-    /*40px;*/
-    border: 0.1875rem solid #fff;
-    /*3px*/
-    background-color: #fff;
-    top: 0;
-    margin: 0;
-    /*text-align: justify;*/
-}
+/*tähän loppuu valikon tyylittely*/
 
-.otsikko {
-    border: 0px solid #000;
-    font-size: 1.5625rem;
-    /*25px;*/
-    text-align: center;
-    margin: auto;
-    padding: 1.25rem;
-    /*20px;*/
-    font-family: "MS Reference", sans-serif;
-}
+/*tästä alkaa hero kuvan tyylittely*/
 
-.otsikko2 {
+.herokuva {
     width: 100%;
-    border: 0px solid #000;
-    margin: auto;
+    /*border: 0px solid #000;*/
+    border: 0.125rem solid #000;
+    margin: -0.1rem;
     /*font-size: 25px;*/
     /*text-align: center;*/
     /*padding: 10px;*/
     object-fit: contain;
     /*object-position: center;*/
     position: static;
-
+    max-width: 60em;
 }
 
-.galleria1 {
-    width: 50%;
-    border: 0px solid #000;
+
+/*tähän loppuu hero kuvan tyylittely*/
+
+/*tästä alkaa otsikoiden ja elementtien tarttuvaisuuden määrittelyt*/
+
+.sticky {
+    position: sticky;
+    font-size: 2.5rem;
+    /*40px;*/
+    border: 0.1875rem solid #a66b37;
+    /*3px*/
+    background-color: #fff;
+    top: 0;
+    margin: 0;
+    /*text-align: justify;*/
+    box-shadow: 0 0 0.3125rem 0 #000;
+}
+
+.otsikko {
+    border: 0.125rem solid #a66b37;
+    font-size: 1.5625rem;
+    /*25px;*/
+    display: inline-block;
+    text-align: center;
+    margin: 1.5rem;
+    padding: 1.25rem;
+    /*20px;*/
+    font-family: "MS Reference", sans-serif;
+    background-color: #f2f2ed;
+}
+
+.otsikko2
+
+/*galleria.html*/
+    {
+    /*border: 0px solid #000;*/
+    border: 0.125rem solid #a66b37;
+    font-size: 1.5625rem;
+    /*25px;*/
+    text-align: center;
     margin: auto;
-    /*font-size: 25px;*/
-    /*text-align: left;*/
-    /*padding: 10px;*/
-    /*object-fit: contain;*/
-    /*object-position: left;*/
-    /*position: static;*/
-    display: flex
-        /*inline-block*/
-    ;
-    flex-direction: row;
-    /*flex-flow: row wrap;*/
-    /*align-items: left;*/
-    /*justify-content: space-evenly;*/
+    padding:
+        /*1.25rem*/
+        1.8rem;
+    /*20px;*/
+    font-family: "MS Reference", sans-serif;
+    background-color: #fff;
+    /*alla olevat ovat vaihtoehtoisia tyylittelyjä*/
+    /*position: sticky;
+    top: 0; tämä tartuttaisi otsikon sivun yläkulmaan*/
 }
 
-.galleria1:hover {
-    border: 1px solid #000;
-}
+/*tähän loppuu otsikoiden ja elementtien tarttuvaisuuden määrittelyt*/
 
-.galleria1 img {
+/*tästä alkaa gallerian tyylittely*/
+
+
+/*taulukon sisäisten kuvien tyylittely*/
+.table-image {
+    max-width: 60em;
     width: 100%;
     height: auto;
 }
 
-.kuvateksti {
-    /*padding: 15px;*/
-    text-align: center;
-    /*background-color: #ecded5;*/
-    border: 0.125rem solid #a66b37;
-    /*2px*/
-    font-family: "MS Reference", sans-serif;
-    background-color: #dde1e2;
-    font-size: 1.25rem
-        /*20px;*/
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.galleriakuvaus {
-    /*background-color: #ecded5;*/
-    border: 0.125rem solid #a66b37;
-    /*2px*/
-    text-align: center;
-    font-family: "MS Reference", sans-serif;
+td {
     background-color: #dde1e2;
-    font-size: 1.25rem
-        /*20px;*/
-        /*I wanted to include some other fonts, but of course from the same family*/
+    padding:
+        /*10px*/
+        0.625rem;
+    text-align: center;
+    border: 0.3125rem solid #a66b37;
+    box-shadow:
+        inset 0 0 0 0.1875rem #dde1e2,
+        0 0 0.3125rem 0 #000;
 }
+
+td p {
+    background-color: #f2f2ed;
+    border: 0.063rem solid #a66b37;
+}
+
+
+/*tähän loppuu gallerian tyylittely*/
+
+
+/*tässä määritellään sivun kuvauksen tyylittelyt, sekä headerin tyylittelyt*/
 
 .yleinenkuvaus {
-    /*background-color: #ecded5;*/
-    border: 0.125rem solid #a66b37;
+    /*vaihtoehtoinen tyyli: background-color: #ecded5;*/
+    border: 0.125rem solid #000;
     /*2px*/
     text-align: center;
     font-family: "MS Reference", sans-serif;
+    /*tässä määritellään kuvauksen fontit, sekä vaihtoehtoinen fontti, jos laite ei tue ensimmäistä*/
     background-color: #dde1e2;
     font-size: 1.25rem
         /*20px;*/
-        /*I wanted to include some other fonts, but of course from the same family*/
 }
 
-/*p {
+.yleinenkuvaus2
+
+/*index.html*/
+    {
+    /*vaihtoehtoinen tyyli: background-color: #ecded5;*/
+    border: 0.125rem solid #a66b37;
+    /*2px*/
+    text-align: center;
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    font-family: "MS Reference", sans-serif;
+    /*tässä määritellään kuvauksen fontit, sekä vaihtoehtoinen fontti, jos laite ei tue ensimmäistä*/
+    /*background-color: #dde1e2;*/
+    background-color: #f2f2ed;
+    font-size: 1.563rem;
+    /*1.25rem 20px;*/
+    margin: 0.5rem;
+}
+
+/*vaihtoehtoinen globaali paragraafin tyylittelytapa: 
+    /*p {
     /*background-color: #ecded5;*/
 /*border: 2px solid #a66b37;
     font-family: "MS Reference", sans-serif;
     background-color: #dde1e2;*/
-/*}*/
-
+/*
+    }
+*/
 
 h1 {
     text-align: center;
@@ -193,17 +237,24 @@ h1 {
     font-family: "MS Reference", sans-serif;
 }
 
+
+/*tähän lopetetaan sivun kuvauksen tyylittelyt, sekä headerin tyylittelyt*/
+
+
 h2 {
     background-color: #ecded5;
     border: 0.0625rem solid #000;
     /*1px*/
     text-align: center;
-    /*this makes the text centered*/
+    /*tämä keskittää tekstin*/
     padding: 0.3125rem 0.625rem;
     /*5px 10px;*/
     font-family: "MS Reference", sans-serif;
-    /*I wanted to include some other fonts, but of course from the same family*/
+    /*tässä määritellään kuvauksen fontit, sekä vaihtoehtoinen fontti, jos laite ei tue ensimmäistä*/
 }
+
+
+/*tässä määritellään footerin tyylittelyt*/
 
 footer {
     font-size: 1.25rem;
@@ -211,6 +262,7 @@ footer {
     text-align: center;
     position: sticky;
     bottom: 0;
+    box-shadow: 0 0 0.3125rem 0 #000;
 }
 
 .footer {
@@ -220,7 +272,7 @@ footer {
     /*2px*/
     font-family: "MS Reference", sans-serif;
     /*background-color: #dde1e2;*/
-    margin: 0;
+    margin: 0 !important;
     /*padding: 0;*/
 }
 
@@ -228,13 +280,17 @@ footer {
     color: #000;
 }
 
+
+/*tähän lopetetaan footerin tyylittelyt*/
+
+
 .linkit {
-    /*background-color: #f2f2ed;*/
-    border: 0px solid #000;
+    background-color: #f2f2ed;
+    border: 0.125rem solid #000;
     text-align: center;
     list-style-position: inside;
-    /*this makes the text centered*/
-    /*this makes the bulletpoints follow the text, without it the bulletpoints will remain to their default positions*/
+    /*tämä keskittää tekstin*/
+    /*tämä saa ranskalaiset viivat seuraamaan tekstiä, ilman tätä määrittelyä ne pysyisivät sivun reunassa*/
     padding: 0.625rem 1.5625rem;
     /*10px 25px;*/
     margin: auto;
@@ -242,7 +298,6 @@ footer {
     font-size: 1.875rem;
     /*30px;*/
     font-family: "MS Reference", sans-serif;
-    /*some shorthand padding, to make it a bit more separated from the rest of the content*/
     display: flex
         /*inline-block*/
     ;
@@ -274,7 +329,7 @@ a.ex1:visited {
         /*1px*/
     }
 
-    /*this set of styling makes the link look like a button when hovered over with a cursor*/
+    /*tämä tyylittely saa linkin näyttämään painikkeelta, kun hiirtä pitää linkin yllä*/
 }
 
 @media (hover: hover) {
@@ -299,45 +354,8 @@ a.ex2:active {
     background-color: white;
 }
 
-/*this set of styling makes the link look like a button with borders when hovered over with a cursor*/
+/*tämä tyylittely saa linkin näyttämään painikkeelta, kun hiirtä pitää linkin yllä*/
 
-th {
-    border-collapse: collapse;
-    border: 0.0625rem solid #000;
-    /*1px*/
-    padding: 1em;
-    background-color: #ecded5;
-    width: 100%;
-    /*this makes the length of the column to match the full width of the site*/
-    text-align: center;
-    font-family: "MS Reference", sans-serif;
-    /*I wanted to include some other fonts, but of course from the same family*/
-}
-
-table {
-    border-collapse: collapse;
-    border: 0.0625rem solid #000;
-    /*1px*/
-    padding: 1em;
-    background-color: #caa885;
-    text-align: center;
-    table-layout: fixed;
-    /*I included this in order to make the table centered, so that both sides are of equal length*/
-    width: 100%;
-}
-
-td {
-    border-collapse: collapse;
-    border: 0.0625rem solid #000;
-    /*1px*/
-    padding: 1em;
-    background-color: #caa885;
-    text-align: center;
-    font-style: italic;
-    /*This makes the text shown inside the table to be displayed in italics*/
-    width: 50%;
-    /*I added this so that the table columns are split equally into 2 parts, but only halved in length*/
-}
 
 caption {
     border-collapse: collapse;

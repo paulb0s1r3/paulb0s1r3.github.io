@@ -34,10 +34,10 @@
             // Close the dropdown if the user clicks outside of it
             window.onclick = function (event) {
                 if (!event.target.matches('.dropbtn')) {
-                    var dropdowns = document.getElementsByClassName("dropdown-content");
-                    var i;
+                    let dropdowns = document.getElementsByClassName("dropdown-content");
+                    let i;
                     for (i = 0; i < dropdowns.length; i++) {
-                        var openDropdown = dropdowns[i];
+                        let openDropdown = dropdowns[i];
                         if (openDropdown.classList.contains('show')) {
                             openDropdown.classList.remove('show');
                         }
@@ -49,22 +49,65 @@
         <br>
         <br>
 
-        <img class="otsikko2" src="../kuvat/100kbkuvat/IMG_6492.jpg" alt="Kuva koirasta kyljelleen">
+        <img class="herokuva" src="../kuvat/100kbkuvat/IMG_5718.jpg" alt="Kuva koirasta kyljelleen">
 
-        <div class="otsikko">
+        <br>
+        <br>
+
+        <div class="otsikko2">
             Kuvakokoelma bulldoggin eri elämäntilanteista:
         </div>
 
-        <div class="galleriakuvaus">
-            <a target="_blank" href="../kuvat/100kbkuvat/IMG_5803.jpg">
-                <img class="galleria1" src="../kuvat/100kbkuvat/IMG_5803.jpg" alt="Kuva koirasta pienenä ulkoilemassa">
-            </a>
-            <div class="kuvateksti">koira1</div>
-            <a target="_blank" href="../kuvat/100kbkuvat/IMG_5877.jpg">
-                <img class="galleria1" src="../kuvat/100kbkuvat/IMG_5877.jpg" alt="Kuva koirasta pienenä ulkoilemassa">
-            </a>
-            <div class="kuvateksti">koira2</div>
-        </div>
+        <br>
+
+        <table>
+            <tr>
+                <td>
+                    <img class="table-image" src="../kuvat/100kbkuvat/IMG_5803.jpg" alt="Placeholder Image">
+                    <p>Text for the first image</p>
+                </td>
+                <td>
+                    <img class="table-image" src="../kuvat/100kbkuvat/IMG_5877.jpg" alt="Placeholder Image">
+                    <p>Text for the second image</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <img class="table-image" src="../kuvat/100kbkuvat/IMG_5877.jpg" alt="Placeholder Image">
+                    <p>Text for the third image</p>
+                </td>
+                <td>
+                    <img class="table-image" src="../kuvat/100kbkuvat/IMG_5803.jpg" alt="Placeholder Image">
+                    <p>Text for the fourth image</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <img class="table-image" src="../kuvat/100kbkuvat/IMG_5803.jpg" alt="Placeholder Image">
+                    <p>Text for the first image</p>
+                </td>
+                <td>
+                    <img class="table-image" src="../kuvat/100kbkuvat/IMG_5877.jpg" alt="Placeholder Image">
+                    <p>Text for the second image</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <img class="table-image" src="../kuvat/100kbkuvat/IMG_5877.jpg" alt="Placeholder Image">
+                    <p>Text for the third image</p>
+                </td>
+                <td>
+                    <img class="table-image" src="../kuvat/100kbkuvat/IMG_5803.jpg" alt="Placeholder Image">
+                    <p>Text for the fourth image</p>
+                </td>
+            </tr>
+
+        </table>
+
+        <br>
 
     </main>
 
@@ -79,6 +122,8 @@
             target="_blank">Yhteystiedot</a>-->
         </p>
     </footer>
+
+
 
 </body>
 
