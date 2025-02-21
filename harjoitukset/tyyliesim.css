@@ -20,7 +20,7 @@ body {
 
 img {
     object-fit: cover;
-    /*some adjustments to the background image, making it fit it's container*/
+    /*mahduttaa taustakuvan elementtiin*/
 }
 
 /*tästä alkaa valikon tyylittely*/
@@ -322,8 +322,10 @@ a.ex1:visited {
     /*14px 25px;*/
     text-align: center;
     text-decoration: none;
-    display: flex, inline-block;
-    flex-flow: row wrap;
+    display:
+        /*flex,*/
+        inline-block;
+    /*flex-flow: row wrap;*/
     align-items: center;
     justify-content: space-evenly;
 }
@@ -351,8 +353,10 @@ a.ex1:visited {
         /*1px*/
         text-align: center;
         text-decoration: none;
-        display: flex, inline-block;
-        flex-flow: row wrap;
+        display:
+            /*flex,*/
+            inline-block;
+        /*flex-flow: row wrap;*/
         align-items: center;
         justify-content: space-evenly;
     }
@@ -364,35 +368,3 @@ a.ex2:active {
 }
 
 /*tämä tyylittely saa linkin näyttämään painikkeelta, kun hiirtä pitää linkin yllä*/
-
-
-caption {
-    border-collapse: collapse;
-    border: 0.0625rem solid #000;
-    /*1px*/
-    background-color: #caa885;
-    /*The reason I didn't group some of these elements is that I wanted them to have some minor differences, i.e in colors*/
-}
-
-.altcolor {
-    background-color: #ecded5;
-    /* this is so the table alternates between colors*/
-}
-
-.source {
-    padding: 0.3125rem 0;
-    /*5px 0px;*/
-    text-align: center;
-    background-color: #e4d4bd;
-    /* i added some padding onto the paragraph with the source link to create some separation*/
-}
-
-.resp {
-    overflow-x: auto;
-    /*this adds a scroll bar to the table, for responsiveness*/
-}
-
-.hcolor {
-    background-color: #caa885;
-    /*i wanted the headers in the other pages to be of a different color*/
-}
