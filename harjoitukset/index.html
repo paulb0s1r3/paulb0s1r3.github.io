@@ -4,10 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- This meta element will be explained when we do RWD -->
-    <meta name="author" content="Paul Bosire, Kerem Arkun"> <!-- This meta element is for the author of the web page -->
+    <!-- Oletusikkunamäärityksiä, perusteellisia mutta tärkeitä -->
+    <meta name="author" content="Paul Bosire, Kerem Arkun">
+    <!-- Tärkeää infoa, jota ei päällepäin sivulla näy, mutta auttaa tarjoamaan kontekstia sivun tekijöistä-->
     <meta name="description" content="Infoa bulldogeista">
-    <meta name="keywords" content="Bulldog, Koira, Ruttunaama, ">
+    <!-- Kuvailee hakukoneissa näkyvissä tuloksissa lyhyesti sivua -->
+    <meta name="keywords" content="Bulldog, Koira, Ruttunaama, Blogi">
+    <!-- Hakukoneoptimointia, hyvä olla vaikkei näkyvyyttä välttämättä tarvita tähän -->
     <link href="../harjoitukset/tyyliesim.css" rel="stylesheet" type="text/css">
     <title>Dogin Elämää</title>
 </head>
@@ -15,23 +18,27 @@
 <body>
 
     <main>
-        <h1 class="sticky">Dogin Elämää
+        <header class="hassuheader">
+            <h1 class="sticky">Dogin Elämää</h1>
             <span class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Valikko</button>
+                <button onclick="myFunction()" class="dropbtn" aria-haspopup="true"
+                    aria-expanded="false">Valikko</button>
+                <!--lisää käytettävyyttä kertomalla ruudunlukijoille että kyseessä on valikkopainike, jonka arvo muuttuu vuorovaikuttaessa josta sen tila tunnistetaan-->
                 <span id="myDropdown" class="dropdown-content">
                     <a href="../harjoitukset/galleria.html">Galleria</a>
                     <a href="../harjoitukset/yhteystiedot.html">Yhteystiedot</a>
                 </span>
             </span>
-        </h1>
+        </header>
         <script>
-            /* When the user clicks on the button, 
-            toggle between hiding and showing the dropdown content */
+            /*Kun käyttäjä painaa painikkeesta, valikon sisältö näytetään ja piilotetaan*/
             function myFunction() {
                 document.getElementById("myDropdown").classList.toggle("show");
+                // lisää käytettävyyttä kertomalla ruudunlukijoille että arvo on muuttunut
+                document.querySelector('.dropbtn').setAttribute('aria-expanded', isExpanded);
             }
 
-            // Close the dropdown if the user clicks outside of it
+            // Sulkee valikon jos käyttäjä painaa valikon ulkopuolelta
             window.onclick = function (event) {
                 if (!event.target.matches('.dropbtn')) {
                     let dropdowns = document.getElementsByClassName("dropdown-content");
@@ -40,6 +47,8 @@
                         let openDropdown = dropdowns[i];
                         if (openDropdown.classList.contains('show')) {
                             openDropdown.classList.remove('show');
+                            // lisää käytettävyyttä kertomalla ruudunlukijoille että arvo on muuttunut
+                            document.querySelector('.dropbtn').setAttribute('aria-expanded', 'false');
                         }
                     }
                 }
